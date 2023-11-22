@@ -2,8 +2,8 @@
 # My solution
 
 ```js
-function isValidCode (string = '1-6 h: hhhhhh') {
-  const fields = string.split(' ')
+function isValidCode (code = '1-6 h: hhhhhh') {
+  const fields = code.split(' ')
 
   const [min, max] = fields[0].split('-').map(number => +number)
 
