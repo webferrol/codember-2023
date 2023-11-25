@@ -5,10 +5,10 @@
 function isValidCode (code = '1-6 h: hhhhhh') {
   const fields = code.split(' ')
 
-  const [min, max] = fields[0].split('-').map(number => +number)
+  const [min, max] = fields[0].split('-').map(number => +number) /*split --> '1-6'*/
 
   const iterations = fields[2].split('').reduce((ac, current) => 
-    current === fields[1][0] ? ac + 1 : ac
+    current === fields[1][0] ? ac + 1 : ac  /*fields[1} --> 'hhhhhh' */
   ,0)
 
   return iterations >= min && iterations <= max 
